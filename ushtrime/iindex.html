@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 320px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        legend {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2575fc;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #2575fc;
+            outline: none;
+            box-shadow: 0 0 5px #2575fc;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .gender {
+            margin-top: 10px;
+        }
+
+        .gender label {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #ff6a4a, #fda763);
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <fieldset>
+        <legend>Login</legend>
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" value="almira" readonly />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" disabled />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Your password" />
+
+        <div class="gender">
+            <label>Gender</label><br/>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+        </div>
+
+        <input type="submit" value="Submit" />
+    </fieldset>
+</form>
+
+</body>
+</html>
